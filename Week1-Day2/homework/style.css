@@ -1,0 +1,102 @@
+/* Custom styles with Tailwind base */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body.dark {
+    @apply bg-gray-900 text-gray-100;
+}
+
+body.dark .theme-toggle {
+    @apply bg-gray-700 hover:bg-gray-600;
+}
+
+body.dark .todo-list input,
+body.dark .sticky-notes input {
+    @apply bg-gray-800 border-gray-700 text-gray-100;
+}
+
+body.dark .todo-list button,
+body.dark .sticky-notes button {
+    @apply bg-gray-700 hover:bg-gray-600;
+}
+
+.todo-item.completed {
+    @apply line-through text-gray-500;
+}
+
+.note {
+    @apply p-4 rounded shadow-md relative;
+}
+
+.note .delete-btn {
+    @apply absolute top-2 right-2 text-red-500 hover:text-red-700 cursor-pointer;
+}
+
+.note {
+    background-color: #b2f2bb;
+    border-radius: 8px;
+    padding: 10px;
+    width: 150px;
+    min-height: 80px;
+    position: relative;
+    margin: 10px;
+    display: inline-block;
+    vertical-align: top;
+    word-wrap: break-word;
+    font-size: 14px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Delete button on note */
+.note .delete-btn {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.dark {
+    background-color: #1f2937;
+    color: #f9fafb;
+}
+
+.note {
+    position: relative;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    word-wrap: break-word;
+    min-height: 80px;
+}
+
+.note .delete-btn {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.note .edit-btn {
+    position: absolute;
+    bottom: 4px;
+    right: 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    color: #2563eb;
+}
+
+.completed span {
+    text-decoration: line-through;
+}
