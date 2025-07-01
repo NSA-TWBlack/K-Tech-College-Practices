@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Mini Task 13</title>
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen">
+
+    <div>
+        <form action="" class="container flex flex-col justify-center">
+            <label for="nameInput">Name</label>
+            <input type="text" id="nameInput" name="nameInput" class="border p-2 rounded-md"
+                placeholder="Enter your name" required>
+            <p id="nameError" class="text-red-500 mt-2 hidden">Name mustn't be empty</p>
+            <button id="formSubmit" class="mt-6 p-2 bg-red-500 text-white rounded hover:bg-red-200">Check
+                valid</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('formSubmit').addEventListener('click', function (event) {
+            event.preventDefault();
+
+            const nameInput = document.getElementById('nameInput');
+            const nameError = document.getElementById('nameError');
+
+            if (nameInput.value.trim() === '') {
+                nameError.classList.remove('hidden');
+                nameInput.classList.add('border-red-500');
+            } else {
+                nameError.classList.add('hidden');
+                alert(`Hello ${nameInput.value}!`);
+            }
+        });
+    </script>
+</body>
+
+</html>

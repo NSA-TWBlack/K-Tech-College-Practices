@@ -1,0 +1,19 @@
+.error {
+    border-color: #ef4444;
+}
+
+.error-message {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.error+.error-message {
+    display: block;
+}
+
+input[type="radio"].error {
+    box-shadow: 0 0 0 2px #ef4444;
+    border-radius: 50%;
+}

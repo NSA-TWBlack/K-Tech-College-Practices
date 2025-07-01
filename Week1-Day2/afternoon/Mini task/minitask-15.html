@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Mini Task 15</title>
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen">
+
+    <div class="container flex flex-col items-center justify-center">
+        <textarea id="bioInput" placeholder="Enter your bio" class="p-2 border border-gray-300 rounded mb-4 w-64"
+            rows="4"></textarea>
+        <p id="charCount"></p>
+    </div>
+
+    <script>
+        const bioInput = document.getElementById('bioInput');
+        const charCount = document.getElementById('charCount');
+        const maxChars = 200;
+
+        function countNonSpaceChars(str) {
+            return str.replace(/\s/g, '').length;
+        }
+
+        function updateCharCount() {
+            let value = bioInput.value;
+            let nonSpaceCount = countNonSpaceChars(value);
+
+            if (nonSpaceCount > maxChars) {
+                let trimmed = '';
+                let count = 0;
+                for (let char of value) {
+                    if (char !== ' ' && char !== '\n' && char !== '\t' && char !== '\r') count++;
+                    if (count > maxChars) break;
+                    trimmed += char;
+                }
+                bioInput.value = trimmed;
+                nonSpaceCount = maxChars;
+            }
+
+            charCount.textContent = `Đã nhập ${nonSpaceCount}/${maxChars} ký tự`;
+            if (nonSpaceCount >= maxChars) {
+                charCount.classList.add('text-red-500');
+            } else {
+                charCount.classList.remove('text-red-500');
+            }
+        }
+
+        bioInput.addEventListener('input', updateCharCount);
+        updateCharCount();
+    </script>
+</body>
+
+</html>

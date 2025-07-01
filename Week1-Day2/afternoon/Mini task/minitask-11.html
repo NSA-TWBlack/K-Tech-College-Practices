@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Mini Task 11</title>
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen">
+
+    <div class="container flex flex-col items-center justify-center">
+        <input type="button" id="hideParaBtn" value="Hide"
+            class="p-2 bg-blue-500 text-white rounded hover:bg-blue-200 mb-4 w-32 ">
+        <p id="infoPara" class="w-100 text-justify">LIKELION là trung tâm đào tạo lập trình chất lượng tại Việt Nam.
+            Chúng tôi không gò bó bản thân trong phương pháp giáo dục truyền thống. Bạn sẽ được học từ những chuyên gia
+            trong ngành, tiếp cận mô hình học hiện đại và chương trình đào tạo chuyên sâu đáp ứng nhu cầu thực tế của
+            thị trường công nghệ.
+        </p>
+    </div>
+
+    <script>
+        document.getElementById('hideParaBtn').addEventListener('click', function () {
+            const para = document.getElementById('infoPara');
+            if (para.style.display === 'none') {
+                para.style.display = 'block';
+                this.value = 'Hide';
+            } else {
+                para.style.display = 'none';
+                this.value = 'Show';
+            }
+        });
+    </script>
+</body>
+
+</html>

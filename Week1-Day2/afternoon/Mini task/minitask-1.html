@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Mini Task 1</title>
+</head>
+
+<body>
+
+    <div class="container flex flex-col items-center justify-center min-h-screen">
+        <input type="button" id="changeTextBtn" value="Change Text"
+            class="mb-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+        <div id="textDisplay"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const changeTextBtn = document.getElementById('changeTextBtn');
+            const textDisplay = document.getElementById('textDisplay');
+
+            changeTextBtn.addEventListener('click', function () {
+                textDisplay.textContent = 'Hello, World!';
+                textDisplay.classList.add('text-2xl', 'font-bold', 'text-blue-700');
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Mini Task 20</title>
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen">
+
+    <div class="container flex flex-col items-center justify-center">
+        <!-- Main display image -->
+        <img id="mainPhoto" src="cat.jpg" alt="Main Photo" class="mb-4 rounded shadow-lg w-72 h-48 object-cover">
+
+        <!-- Thumbnails -->
+        <div class="flex gap-4">
+            <img src="cat.jpg"
+                class="thumbnail cursor-pointer rounded border-2 border-transparent hover:border-blue-500 w-24 h-16 object-cover"
+                alt="Thumbnail 1">
+            <img src="dog.jpg"
+                class="thumbnail cursor-pointer rounded border-2 border-transparent hover:border-blue-500 w-24 h-16 object-cover"
+                alt="Thumbnail 2">
+            <img src="hamster.jpg"
+                class="thumbnail cursor-pointer rounded border-2 border-transparent hover:border-blue-500 w-24 h-16 object-cover"
+                alt="Thumbnail 3">
+        </div>
+    </div>
+
+    <script>
+        const mainPhoto = document.getElementById('mainPhoto');
+        const thumbnails = document.querySelectorAll('.thumbnail');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', function () {
+                mainPhoto.src = this.src;
+            });
+        });
+    </script>
+</body>
+
+</html>

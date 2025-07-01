@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Mini Task 7</title>
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen">
+
+    <div class="container flex flex-row items-center justify-center">
+        <input type="button" id="addItemBtn" value="Red" class="ml-4 p-2 bg-red-500 text-white rounded">
+        <input type="button" id="addItemBtn" value="Blue" class="ml-4 p-2 bg-blue-500 text-white rounded">
+        <input type="button" id="addItemBtn" value="Green" class="ml-4 p-2 bg-green-500 text-white rounded">
+        <input type="button" id="addItemBtn" value="Orange" class="ml-4 p-2 bg-orange-500 text-white rounded">
+        <input type="button" id="addItemBtn" value="Yellow" class="ml-4 p-2 bg-yellow-500 text-white rounded">
+    </div>
+
+    <script>
+        document.querySelectorAll('#addItemBtn').forEach(button => {
+            button.addEventListener('click', function () {
+                const color = this.value;
+                alert(`You clicked the ${color} button!`);
+            });
+        });
+    </script>
+</body>
+
+</html>

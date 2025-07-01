@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Mini Task 19</title>
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen">
+
+    <div class="container flex flex-col items-center justify-center">
+        <div class="flex flex-col gap-2 mb-4">
+            <label><input type="checkbox" class="optionBox"> Option 1</label>
+            <label><input type="checkbox" class="optionBox"> Option 2</label>
+            <label><input type="checkbox" class="optionBox"> Option 3</label>
+            <label><input type="checkbox" class="optionBox"> Option 4</label>
+        </div>
+        <div>
+            Checked: <span id="checkedCount">0</span>
+        </div>
+    </div>
+
+    <script>
+        const checkboxes = document.querySelectorAll('.optionBox');
+        const checkedCount = document.getElementById('checkedCount');
+
+        function updateCheckedCount() {
+            const count = Array.from(checkboxes).filter(cb => cb.checked).length;
+            checkedCount.textContent = count;
+        }
+
+        checkboxes.forEach(cb => cb.addEventListener('change', updateCheckedCount));
+        updateCheckedCount();
+    </script>
+</body>
+
+</html>

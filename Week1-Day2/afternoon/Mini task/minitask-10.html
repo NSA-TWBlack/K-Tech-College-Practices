@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Mini Task 10</title>
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen">
+
+    <div>
+        <form action="" class="container flex flex-col justify-center">
+            <label for="emailInput">Email</label>
+            <input type="text" id="emailInput" name="emailInput" class="border border-slate-800 p-2 rounded-md"
+                placeholder="Enter your email" required>
+            <p id="errorMessage" class="text-red-500 mt-2 hidden">Invalid email</p>
+            <button onclick="checkValidEmail" class="mt-6 p-2 bg-red-500 text-white rounded hover:bg-red-200">Check
+                valid</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const emailInput = document.getElementById('emailInput');
+            const errorMessage = document.getElementById('errorMessage');
+
+            document.querySelector('button').addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent form submission
+
+                const email = emailInput.value;
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (emailPattern.test(email)) {
+                    errorMessage.classList.add('hidden');
+                    alert('Valid email');
+                } else {
+                    errorMessage.classList.remove('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Mini Task 4</title>
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen">
+
+    <div class="container flex flex-col items-center justify-center">
+        <ul id="itemList" class="border-solid border-black mt-6">
+            <li>An Toan <input type="button" value="Delete Item"
+                    class="deleteBtn ml-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-600"></li>
+            <li>Duc Trung <input type="button" value="Delete Item"
+                    class="deleteBtn ml-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-600"></li>
+            <li>Nguyen Van <input type="button" value="Delete Item"
+                    class="deleteBtn ml-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-600"></li>
+            <li>Anh Tuan <input type="button" value="Delete Item"
+                    class="deleteBtn ml-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-600"></li>
+            <li>An Toan <input type="button" value="Delete Item"
+                    class="deleteBtn ml-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-600"></li>
+
+        </ul>
+    </div>
+
+
+    <script>
+        document.querySelectorAll('.deleteBtn').forEach(button => {
+            button.addEventListener('click', function () {
+                const listItem = this.parentElement;
+                listItem.remove();
+            });
+        });
+    </script>
+</body>
+
+</html>

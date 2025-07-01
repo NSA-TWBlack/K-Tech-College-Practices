@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Mini Task 12</title>
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen">
+
+    <div class="container flex flex-col items-center justify-center">
+        <p id="greetingText">Good morning</p>
+    </div>
+
+    <script>
+        const greetingText = document.getElementById('greetingText');
+        const currentHour = new Date().getHours();
+
+        if (currentHour < 12 & currentHour > 6) {
+            greetingText.textContent = 'Good morning';
+        } else if (currentHour < 18) {
+            greetingText.textContent = 'Good afternoon';
+        } else {
+            greetingText.textContent = 'Good evening';
+        }
+    </script>
+</body>
+
+</html>

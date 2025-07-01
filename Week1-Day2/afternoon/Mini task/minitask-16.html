@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Mini Task 16</title>
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen">
+
+    <div class="container flex flex-col items-center justify-center">
+        <input type="button" id="addBoxBtn" value="Add box"
+            class="p-2 bg-blue-500 text-white rounded hover:bg-blue-200 mb-4 w-32">
+        <div id="boxContainer" class="flex border w-100 h-100 flex-wrap gap-2 mb-4"></div>
+    </div>
+
+    <script>
+        const addBoxBtn = document.getElementById('addBoxBtn');
+        const boxContainer = document.getElementById('boxContainer');
+
+        addBoxBtn.addEventListener('click', () => {
+            const box = document.createElement('div');
+            // Tailwind classes for a 50x50px colored square
+            box.className = 'w-12 h-12 bg-green-400 rounded shadow';
+            boxContainer.appendChild(box);
+        });
+    </script>
+</body>
+
+</html>

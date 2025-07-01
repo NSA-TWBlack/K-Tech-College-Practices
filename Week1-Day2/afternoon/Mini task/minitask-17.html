@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Mini Task 17</title>
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen">
+
+    <div class="container flex flex-col items-center justify-center">
+        <ul id="todoList">
+            <li>Buy groceries</li>
+            <li>Walk the dog</li>
+            <li>Read a book</li>
+            <li>Finish homework</li>
+            <li>Call a friend</li>
+            <li>Exercise</li>
+        </ul>
+    </div>
+
+    <script>
+        // Get the todoList element
+        const todoList = document.getElementById('todoList');
+
+        // Add click event listener to the list
+        todoList.addEventListener('click', function (event) {
+            if (event.target.tagName === 'li') {
+                event.target.classList.toggle('line-through');
+            }
+        });
+    </script>
+</body>
+
+</html>
