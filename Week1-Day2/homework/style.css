@@ -1,5 +1,5 @@
 /* Custom styles with Tailwind base */
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -31,7 +31,7 @@ body.dark .sticky-notes button {
 
 .note .delete-btn {
     @apply absolute top-2 right-2 text-red-500 hover:text-red-700 cursor-pointer;
-}
+} */
 
 .note {
     background-color: #b2f2bb;
@@ -67,8 +67,14 @@ body.dark .sticky-notes button {
     z-index: 10;
 }
 
-.dark {
+body.dark {
     background-color: #1f2937;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark .greeting,
+body.dark #clock {
     color: #f9fafb;
 }
 

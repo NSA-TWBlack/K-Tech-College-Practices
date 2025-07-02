@@ -11,12 +11,28 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 
-// Theme toggle 🌙 / ☀️
+// Theme toggle
+// Theme toggle with localStorage
 const themeBtn = document.getElementById("themeToggle");
+
+function applySavedTheme() {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+        themeBtn.textContent = "☀️";
+    } else {
+        document.body.classList.remove("dark");
+        themeBtn.textContent = "🌙";
+    }
+}
+
 themeBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-    themeBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+    const isDark = document.body.classList.toggle("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    themeBtn.textContent = isDark ? "☀️" : "🌙";
 });
+
+applySavedTheme();
 
 // ========== TO-DO ========== //
 function addTodo() {
