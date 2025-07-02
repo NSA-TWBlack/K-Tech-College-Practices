@@ -1,0 +1,54 @@
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px 32px;
+  box-shadow: 0 2px 8px #0001;
+  display: flex;
+  align-items: center;
+  min-width: 300px;
+  gap: 28px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 48px;
+}
+
+.month {
+  font-size: 1.05rem;
+  color: #222;
+}
+
+.day {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #ff1ebd;
+  margin-top: 2px;
+}
+
+.divider {
+  width: 1px;
+  height: 40px;
+  background: #e6e6e6;
+  margin: 0 18px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.weekday {
+  font-weight: bold;
+  font-size: 1.15rem;
+  color: #222;
+}
+
+.time {
+  color: #7b8a99;
+  font-size: 1rem;
+  margin-top: 2px;
+}

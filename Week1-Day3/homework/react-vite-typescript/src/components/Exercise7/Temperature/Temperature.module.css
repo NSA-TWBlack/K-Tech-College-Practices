@@ -1,0 +1,41 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 32px;
+  padding: 24px 32px;
+  min-width: 340px;
+  min-height: 100px;
+  box-shadow: 0 2px 8px #0001;
+  color: #fff;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.city {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 2px;
+}
+
+.weather {
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+.center {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-right: 16px;
+}
+
+.right {
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,60 @@
+.card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 24px 24px 16px 24px;
+  box-shadow: 0 2px 8px #0001;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 320px;
+  margin: 16px 0;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  background: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.desc {
+  color: #7b8a99;
+  font-size: 0.95rem;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.amount {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.time {
+  color: #bfc6ce;
+  font-size: 0.9rem;
+}

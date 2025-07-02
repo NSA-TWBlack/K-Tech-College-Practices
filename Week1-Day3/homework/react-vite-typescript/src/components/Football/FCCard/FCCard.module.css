@@ -1,0 +1,23 @@
+.fcCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    min-width: 300px;
+}
+
+.logo {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    flex: 1;
+    margin-left: 10px;
+}

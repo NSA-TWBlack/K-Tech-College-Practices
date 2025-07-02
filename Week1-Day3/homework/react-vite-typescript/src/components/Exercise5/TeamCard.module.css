@@ -1,0 +1,38 @@
+.card {
+  width: 300px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  min-height: 110px;
+  transition: box-shadow 0.2s;
+  box-shadow: 0 2px 8px #0001;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.subtitle {
+  color: #e6e6e6;
+  font-size: 1.1rem;
+  margin-top: 4px;
+}
+
+.card span {
+  color: #000;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.card:nth-child(2) .subtitle {
+  color: #e6e6e6;
+}

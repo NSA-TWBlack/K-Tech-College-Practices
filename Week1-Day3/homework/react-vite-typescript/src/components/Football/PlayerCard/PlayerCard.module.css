@@ -1,0 +1,30 @@
+.playerCard {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    min-width: 300px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 10px;
+    margin-left: 60px;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    flex: 1;
+}
+
+.visaNumber{
+    flex: 1;
+    margin-left: 10px;
+}

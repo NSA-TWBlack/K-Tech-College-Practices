@@ -1,0 +1,84 @@
+.card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 24px 28px 20px 28px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.topRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+}
+
+.tagHighlight {
+    background: #f0fdf4;
+    color: #222;
+    font-weight: 500;
+    border-radius: 12px;
+    padding: 4px 14px;
+    font-size: 14px;
+}
+
+.tagFeeds {
+    background: #fdf2fa;
+    color: #222;
+    font-weight: 500;
+    border-radius: 12px;
+    padding: 4px 14px;
+    font-size: 14px;
+}
+
+.menu {
+    font-size: 22px;
+    color: #222;
+    cursor: pointer;
+    user-select: none;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #111;
+}
+
+.subtitle {
+    color: #a0aec0;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.progressBarWrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.progressBar {
+    flex: 1;
+    height: 8px;
+    background: #f1f5f9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: #86efac;
+    border-radius: 8px 0 0 8px;
+    transition: width 0.3s;
+}
+
+.percent {
+    font-size: 16px;
+    font-weight: 500;
+}
