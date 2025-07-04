@@ -1,0 +1,54 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.productCard {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border: 1px solid;
+  border-radius: 10px;
+  width: 200px;
+  padding: 5px 25px 5px 10px;
+}
+
+.productContent {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.productImg {
+  width: 50px;
+  height: 50px;
+}
+
+.title {
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.price {
+  font-size: 10px;
+  color: red;
+  font-weight: bold;
+}
+
+.deleteBtn {
+  position: absolute;
+  font-size: 5px;
+  background-color: rgb(189, 189, 189);
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  left: 90%;
+  top: 10%;
+}

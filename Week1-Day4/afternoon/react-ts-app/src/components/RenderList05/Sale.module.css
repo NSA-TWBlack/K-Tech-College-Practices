@@ -1,0 +1,79 @@
+.saleCard {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  min-height: 300px;
+  flex-shrink: 0;
+}
+
+.saleImgContainer {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.saleImg {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.discountPercent {
+  position: absolute;
+  top: 0;
+  left: 90%;
+  background-color: #ff6200;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.saleTitle {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgb(66, 189, 230);
+}
+
+.salePrice {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.salePriceNew {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(21, 157, 0);
+}
+
+.salePriceOld {
+  font-size: 10px;
+  font-weight: 600;
+  text-decoration: line-through;
+}
+
+.rate {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.star {
+  color: rgb(255, 191, 0);
+  font-size: 10px;
+}
+
+.line {
+  width: 100%;
+  height: 10px;
+  margin-top: 10px;
+  background-color: rgb(235, 235, 235);
+}
+
+.inLine {
+  height: 10px;
+  margin-top: 10px;
+  background-color: rgb(255, 191, 0);
+}

@@ -1,0 +1,117 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: end;
+  min-height: 90vh;
+  width: 90vw;
+}
+
+.bellContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.bellButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+  color: #1877f2;
+  position: relative;
+}
+
+.dot {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 10px;
+  height: 10px;
+  background: #e41e3f;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  display: block;
+}
+
+.tab {
+  position: absolute;
+  right: 0;
+  top: 70px;
+  width: 320px;
+  background: #242526;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  padding: 0;
+}
+
+.tabHeader {
+  padding: 16px 16px 0 16px;
+  border-bottom: 1px solid #393a3b;
+}
+
+.tabTitle {
+  font-size: 18px;
+}
+
+.tabNav {
+  display: flex;
+  border-bottom: 1px solid #393a3b;
+}
+
+.tabBtn {
+  flex: 1;
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 12px 0;
+  font-weight: bold;
+  border-bottom: 2px solid #1877f2;
+  cursor: pointer;
+}
+
+.tabBtnInactive {
+  flex: 1;
+  background: none;
+  border: none;
+  color: #b0b3b8;
+  padding: 12px 0;
+  cursor: pointer;
+  border-bottom: none;
+}
+
+.tabContent {
+  padding: 16px;
+}
+
+.notifyRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.notifyText {
+  font-size: 14px;
+}
+
+.notifySub {
+  color: #b0b3b8;
+}
+
+.notifyTime {
+  font-size: 12px;
+  color: #b0b3b8;
+}
+
+.likeIcon {
+  margin-left: auto;
+  color: #1877f2;
+  font-size: 20px;
+}
