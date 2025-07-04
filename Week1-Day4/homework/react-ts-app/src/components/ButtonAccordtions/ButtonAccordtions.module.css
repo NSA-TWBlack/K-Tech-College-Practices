@@ -1,0 +1,48 @@
+.accordionWrapper {
+  display: flex;
+  gap: 32px;
+  margin: 16px 16px 0 16px;
+}
+
+.accordionCol {
+  flex: 1;
+  min-width: 350px;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.accordionItem {
+  margin-bottom: 12px;
+}
+
+.accordionBtn {
+  width: 100%;
+  padding: 18px 0;
+  background: #f7f7f7;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.accordionBtn.active {
+  background: #4caf83;
+  color: #fff;
+}
+
+.accordionContent {
+  background: #fff;
+  border: 1px solid #eee;
+  border-top: none;
+  padding: 24px 18px;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}

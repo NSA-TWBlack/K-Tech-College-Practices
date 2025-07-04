@@ -1,0 +1,11 @@
+#root {
+  width: 80%;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  margin: 40px 0;
+}
+
+h1:first-child {
+  text-align: center;
+}
