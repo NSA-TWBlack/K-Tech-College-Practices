@@ -32,10 +32,6 @@ const RouterApp = (props: Props) => {
     );
   }
 
-  function Layout() {
-    return <div style={}></div>;
-  }
-
   return (
     <div>
       <BrowserRouter>
