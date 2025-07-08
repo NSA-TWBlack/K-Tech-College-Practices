@@ -108,7 +108,7 @@ const WeatherApp: React.FC = () => {
       const currentHour = now.getHours();
       const todayHours = forecastData.forecast.forecastday[0].hour;
 
-      const nextHours = todayHours.slice(currentHour, currentHour + 8);
+      const nextHours = todayHours.slice(currentHour, currentHour + 5);
       setHourlyData(nextHours);
     } catch (err) {
       setError(
@@ -166,10 +166,10 @@ const WeatherApp: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 p-4">
-      <div className="max-w-md mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
+    <div className="min-h-screen bg-white p-4">
+      <div className="max-w-md mx-auto bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300 rounded-3xl shadow-2xl overflow-hidden">
         {/* Search Bar */}
-        <div className="p-4 bg-gray-50">
+        <div className="p-4">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <input
