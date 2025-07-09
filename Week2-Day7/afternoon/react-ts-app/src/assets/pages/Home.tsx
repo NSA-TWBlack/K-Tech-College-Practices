@@ -1,8 +1,4 @@
-import React from "react";
-
-type Props = {};
-
-const Home = (props: Props) => {
+const Home = () => {
   return (
     <div className="flex justify-center items-center min-h-[470px]">Home</div>
   );

@@ -2,9 +2,11 @@ import React from "react";
 
 const OverviewPage: React.FC = () => {
   return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold text-gray-800">Overview Page</h1>
-      <p className="text-gray-600 mt-2">Dashboard overview and statistics</p>
+    <div className="p-6 grid grid-cols-4 grid-rows-5 gap-4">
+      <div className="bg-white shadow-md p-6">sddfd</div>
+      <div className="bg-white shadow-md p-6">dfdfdf</div>
+      <div className="bg-white shadow-md p-6">dfdfdf</div>
+      <div className="bg-white shadow-md p-6">dfdfff</div>
     </div>
   );
 };

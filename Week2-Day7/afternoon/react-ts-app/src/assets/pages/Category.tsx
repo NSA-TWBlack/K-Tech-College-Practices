@@ -1,8 +1,4 @@
-import React from "react";
-
-type Props = {};
-
-const Category = (props: Props) => {
+const Category = () => {
   return (
     <div className="flex justify-center items-center min-h-[470px]">
       Category

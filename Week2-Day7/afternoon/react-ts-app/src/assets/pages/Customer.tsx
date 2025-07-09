@@ -1,8 +1,4 @@
-import React from "react";
-
-type Props = {};
-
-const Customer = (props: Props) => {
+const Customer = () => {
   return (
     <div className="flex justify-center items-center min-h-[470px]">
       Customer

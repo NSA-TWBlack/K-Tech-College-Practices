@@ -1,5 +1,4 @@
 // Header.tsx
-import React from "react";
 import { ShoppingCart } from "lucide-react";
 import { NavLink } from "react-router-dom";
 

@@ -1,5 +1,5 @@
 // Sidebar.tsx
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 type Category = {
   id: number;
