@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { useNavigate } from "react-router";
 
 import TaskFilterForm from "../../components/TaskFilterForm";
 import TaskList from "../../components/TaskList";
@@ -7,12 +6,16 @@ import { searchTasks } from "../../utils";
 
 import type { Filter, Task } from "../../types/Task";
 import { getTasks } from "../../services/service";
+import UpdateTask from "./UpdateTask";
 
 export default function MyTask() {
-  const navigate = useNavigate();
   // Mock data for demonstration
   const [tasks, setTasks] = React.useState<Task[]>([]);
   const [filters, setFilters] = React.useState<Filter>({});
+  const [editTaskId, setEditTaskId] = React.useState<
+    string | number | undefined
+  >(undefined);
+  const [dialogOpen, setDialogOpen] = React.useState(false);
 
   useEffect(() => {
     const fetchTasks = async () => {
@@ -31,7 +34,15 @@ export default function MyTask() {
   };
 
   const handleEdit = (taskId: string | number | undefined) => {
-    navigate(`/update/${taskId}`);
+    setEditTaskId(taskId);
+    setDialogOpen(true);
+  };
+
+  const handleDialogClose = () => {
+    setDialogOpen(false);
+    setEditTaskId(undefined);
+    // Optionally, refresh tasks after update
+    // fetchTasks();
   };
 
   return (
@@ -48,9 +59,6 @@ export default function MyTask() {
           <div className="flex justify-between items-center">
             <div>
               <h2 className="text-2xl font-bold text-gray-800">Our tasks</h2>
-              <p className="text-gray-600 mt-1">
-                Manage and track all our tasks
-              </p>
             </div>
           </div>
         </section>
@@ -61,6 +69,11 @@ export default function MyTask() {
           </div>
         </section>
       </section>
+      <UpdateTask
+        open={dialogOpen}
+        onClose={handleDialogClose}
+        taskId={editTaskId}
+      />
     </div>
   );
 }

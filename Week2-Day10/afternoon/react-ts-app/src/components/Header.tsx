@@ -31,7 +31,7 @@ const Header = () => {
       <ul className="flex flex-wrap gap-5 text-white font-medium text-sm md:text-base">
         <li>
           <span className="cursor-pointer hover:text-orange-300 transition-colors duration-200">
-            Hi, {user.loggedInUser?.email}
+            Hi, {user.loggedInUser.email}
           </span>
         </li>
         {navItems.map((item) => (
