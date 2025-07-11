@@ -37,10 +37,10 @@ const Login = () => {
   } = useForm<IFormInput>({
     resolver: yupResolver(validationSchema),
     mode: "onChange",
-    // defaultValues: {
-    //   username: "tungnt@softech.vn",
-    //   password: "123456789",
-    // },
+    defaultValues: {
+      username: "tungnt@softech.vn",
+      password: "123456789",
+    },
   });
 
   const onSubmit = async (data: IFormInput): Promise<void> => {

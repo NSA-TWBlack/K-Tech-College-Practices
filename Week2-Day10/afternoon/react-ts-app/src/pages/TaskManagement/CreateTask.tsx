@@ -53,9 +53,9 @@ const validationSchema: yup.ObjectSchema<TaskFormData> = yup.object({
     .required("Priority is required")
     .oneOf(["low", "medium", "high"], "Please select a valid priority"),
   assignee_id: yup
-    .number()
+    .string()
     .optional()
-    .min(1, "Assignee ID cannot be empty if provided"),
+    .matches(/^$|^\d+$/, "Assignee ID must be a positive integer"),
 });
 
 export default function CreateTask() {
@@ -90,7 +90,7 @@ export default function CreateTask() {
         description: data.description || undefined,
         status: data.status,
         priority: data.priority,
-        assignee_id: data.assignee_id || undefined,
+        assignee_id: data.assignee_id ? Number(data.assignee_id) : undefined,
         completed_date: data.status === "done" ? new Date() : undefined,
         created_time: new Date(),
         updated_time: new Date(),
