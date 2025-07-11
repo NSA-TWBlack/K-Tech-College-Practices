@@ -47,6 +47,7 @@ const Login = () => {
     try {
       const user = await login(data.username, data.password);
       setUser(user);
+      localStorage.setItem("user", JSON.stringify(user));
       navigate("/tasks");
     } catch (error) {
       console.error("Login error:", error);
@@ -107,7 +108,10 @@ const Login = () => {
               <input
                 type="submit"
                 value="Continues"
-                className="text-white py-1 px-3 w-full bg-amber-500 rounded-sm"
+                disabled={isSubmitting || !isValid}
+                className="text-white py-1 px-3 w-full bg-amber-500 rounded-sm ${
+            isSubmitting || !isValid ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-600 text-white'
+          }"
               />
             </form>
           </div>
