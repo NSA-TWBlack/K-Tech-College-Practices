@@ -4,6 +4,7 @@ import * as yup from "yup";
 import type { Task } from "../../types/Task";
 import { createTask } from "../../services/service";
 import { useNavigate } from "react-router";
+import ButtonWithRoles from "../../components/ButtonWithRoles";
 
 // Form data interface (excluding auto-generated fields)
 interface TaskFormData {
@@ -99,7 +100,7 @@ export default function CreateTask() {
       // Call API to create task
       await createTask(taskData);
 
-      navigate("/tasks");
+      navigate("/");
 
       // Reset form
       reset();
@@ -326,7 +327,8 @@ export default function CreateTask() {
           >
             Reset
           </button>
-          <button
+          <ButtonWithRoles
+            allowedRoles={["Administrators"]}
             type="submit"
             disabled={isSubmitting || !isValid}
             className={`px-6 py-2 rounded-md font-medium transition-colors ${
@@ -336,7 +338,7 @@ export default function CreateTask() {
             }`}
           >
             {isSubmitting ? "Creating..." : "Create Task"}
-          </button>
+          </ButtonWithRoles>
         </div>
 
         {/* Form Status */}
