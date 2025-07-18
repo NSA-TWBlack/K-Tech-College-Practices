@@ -68,13 +68,12 @@ export default function TaskList({ tasks, onEdit }: Props) {
               {task.assignee_id || "Unassigned"}
             </td>
             <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-              <ButtonWithPermissions
-                permissions={["Administrator"]}
+              <button
                 onClick={() => onEdit?.(task.id)}
                 className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
               >
                 Edit
-              </ButtonWithPermissions>
+              </button>
             </td>
           </tr>
         ))}
