@@ -3,7 +3,6 @@ import TaskDate from "./TaskDate";
 import TaskPriority from "./TaskPriority";
 import TaskStatus from "./TaskStatus";
 import TaskTitle from "./TaskTitle";
-import ButtonWithPermissions from "./ButtonWithPermissions";
 
 type Props = {
   tasks: Task[];
